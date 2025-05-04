@@ -1,0 +1,26 @@
+body {
+  background-color: #0d0d0d;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  padding: 50px;
+}
+
+.player {
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px #444;
+  max-width: 400px;
+  margin: auto;
+}
+
+button {
+  background: #5c5cff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
