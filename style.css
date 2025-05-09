@@ -1,26 +1,32 @@
 body {
-  background-color: #0d0d0d;
+  background: #121212;
   color: #fff;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: sans-serif;
   text-align: center;
-  padding: 50px;
+  padding: 20px;
 }
 
 .player {
-  background: #1a1a1a;
-  padding: 30px;
-  border-radius: 20px;
-  box-shadow: 0 0 15px #444;
   max-width: 400px;
   margin: auto;
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
 }
 
 button {
-  background: #5c5cff;
-  border: none;
+  background: #1db954;
+  color: white;
   padding: 10px 20px;
-  margin-top: 20px;
-  color: #fff;
-  border-radius: 10px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
   cursor: pointer;
 }
