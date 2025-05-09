@@ -1,14 +1,19 @@
-const songs = [
-  "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
-  "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
-  "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
-];
+const API_URL = 'http://yt.sanatanixtech.site/?key=SANATANIxTECH';
 
-let currentSong = 0;
-const audio = document.getElementById("audioPlayer");
+async function loadSong() {
+  try {
+    const res = await fetch(API_URL);
+    const song = await res.json();
 
-function nextSong() {
-  currentSong = (currentSong + 1) % songs.length;
-  audio.src = songs[currentSong];
-  audio.play();
+    document.getElementById('title').textContent = song.title;
+    document.getElementById('channel').textContent = song.channel;
+    document.getElementById('thumbnail').src = song.thumbnail;
+    document.getElementById('audio').src = song.stream_url;
+  } catch (err) {
+    alert('Failed to load song.');
+    console.error(err);
+  }
 }
+
+document.getElementById('next').addEventListener('click', loadSong);
+window.onload = loadSong;
